@@ -1,65 +1,45 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import style from "../styles/Home.module.css";
+import React, {Component} from "react";
+import Layout from "../Components/Layout";
+import Link from "next/link";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Index =()=>{
+  return(
+    <>
+<Layout>
+    <Head>
+      <title>Ifeanyi Lucky</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></link>
+    <link rel="preload" href="../public/font/GT-Walsheim-Medium.woff2" as="font" crossorigin=""/>
+    </Head>
+    <div>
+    <div className={style.helloParent}>
+    <div className={style.hello}>HELLO</div></div>
+    <div>
+      <div className="row">
+        <div className="col-10 mx-auto">
+          <div className={style.intro}>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className="h1">I am <span style={{color: "teal"}}>Ifeanyi</span> Lucky</h1>
+        <div className={style.role}>Frontend Developer</div>
+        <p className="mx-auto mt-3" >Frontend developer and Javascript engineer based in Lagos, practicing minimalist, and Hiphop Music & Jazz lover in search of flow.</p> <br/>
+        <p style={{lineHeight: "30px"}}>Working with my hands to make magic happen on the internet. View my <span className="link">Projects</span>, <span className="linkk">Articles</span>, <span className="link">Resumé</span>, <span className="link">Contact</span> me, or send me an email at <span className="link">ifeanyilucky360@gmail.com</span>.</p>
+     
+     
+      </div>
+      <div className="mt-5">
+<p><Link href="/pages/about"><a>See more about me</a></Link></p>
+      </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      </div>
+      
     </div>
+    </div>
+   </Layout>
+    </>
   )
 }
+
+export default Index
