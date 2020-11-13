@@ -1,45 +1,81 @@
 import Head from "next/head";
 import style from "../styles/Home.module.css";
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Layout from "../Components/Layout";
 import Link from "next/link";
+import styled from "styled-components";
 
-const Index =()=>{
-  return(
+const Index = () => {
+  return (
     <>
-<Layout>
-    <Head>
-      <title>Ifeanyi Lucky</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"></link>
-    <link rel="preload" href="../public/font/GT-Walsheim-Medium.woff2" as="font" crossorigin=""/>
-    </Head>
-    <div>
-    <div className={style.helloParent}>
-    <div className={style.hello}>HELLO</div></div>
-    <div>
-      <div className="row">
-        <div className="col-10 mx-auto">
-          <div className={style.intro}>
-
-        <h1 className="h1">I am <span style={{color: "teal"}}>Ifeanyi</span> Lucky</h1>
-        <div className={style.role}>Frontend Developer</div>
-        <p className="mx-auto mt-3" >Frontend developer and Javascript engineer based in Lagos, practicing minimalist, and Hiphop Music & Jazz lover in search of flow.</p> <br/>
-        <p style={{lineHeight: "30px"}}>Working with my hands to make magic happen on the internet. View my <span className="link">Projects</span>, <span className="linkk">Articles</span>, <span className="link">Resumé</span>, <span className="link">Contact</span> me, or send me an email at <span className="link">ifeanyilucky360@gmail.com</span>.</p>
-     
-     
-      </div>
-      <div className="mt-5">
-<p><Link href="/pages/about"><a>See more about me</a></Link></p>
-      </div>
-
+      <Layout>
+        <Head>
+          <title>Ifeanyi Lucky</title>
+        </Head>
+        <div>
+          <div className={style.helloParent}>
+            <div className={style.hello}>
+              HELL<span className="bigO">O</span>
+            </div>
+          </div>
+          <div>
+            <div className="row">
+              <div className="col-10 mx-auto">
+                <div className={style.intro}>
+                  <h1 className="h1" className="intro__text">
+                    I am <span style={{ color: " #f6ba2c" }}>Ifeanyi</span>
+                    Lucky
+                  </h1>
+                  <div className={style.role}>Frontend Developer</div>
+                  <p className="mx-auto mt-3">
+                    I'm a software engineer specializing in developing - and
+                    often designing - high-quality applications and websites.
+                    I’m currently looking for a mid-level role.
+                  </p>
+                  <br />
+                  <p style={{ lineHeight: "30px" }}>
+                    Working with my hands to make magic happen on the internet.
+                    View my
+                    <Link href="/projects">
+                      <span className="link">Projects</span>
+                    </Link>
+                    , <span className="linkk">Articles</span>,
+                    <span className="link">Resumé</span>,
+                    <Link href="/contact">
+                      <span className="link">Contact</span>
+                    </Link>
+                    me, or send me an email at
+                    <a href="mailto:ifeanyilucky360@gmail.com">
+                      <span className="link">ifeanyilucky360@gmail.com</span>
+                    </a>
+                    .
+                  </p>
+                </div>
+                <div className="mt-5">
+                  <Link href="/about">
+                    <p>
+                      <a className="weblink">
+                        See more about me
+                        <svg
+                          width="24"
+                          height="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        >
+                          <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
+                        </svg>
+                      </a>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      
-    </div>
-    </div>
-   </Layout>
+      </Layout>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
