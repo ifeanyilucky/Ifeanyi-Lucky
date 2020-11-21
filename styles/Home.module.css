@@ -160,7 +160,7 @@
 .helloParent .hello {
   position: absolute;
   top: 12rem;
-  left: -11rem;
+  left: -18rem;
   font-weight: 900;
   font-size: 8rem;
   color: rgba(128, 128, 128, 0.432);

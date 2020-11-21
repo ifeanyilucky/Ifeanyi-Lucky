@@ -1,12 +1,29 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 const NavItem = ({ isOpen }) => {
   return (
     <Ul isOpen={isOpen}>
-      <li>Home</li>
-      <li>About me</li>
-      <li>Portfolio</li>
-      <li>Contact me</li>
+      <li>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/contact">
+          <a>Contact</a>
+        </Link>
+      </li>
     </Ul>
   );
 };
@@ -16,12 +33,24 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  transition: all 0.3s linear;
+
   li {
-    margin-left: 0.96rem;
+    a {
+      text-decoration: none;
+      margin-left: 0.96rem;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.5);
+      transition: border-bottom 0.3s ease-in-out;
+      padding-bottom: 8px;
+      &:hover {
+        color: rgba(0, 0, 0, 0.7);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+      }
+    }
   }
 
   @media (max-width: 768px) {
+    transition: all 0.3s linear;
     transform: ${({ isOpen }) =>
       isOpen ? "translateX(100%)" : "translateX(0)"};
     flex-flow: column nowrap;

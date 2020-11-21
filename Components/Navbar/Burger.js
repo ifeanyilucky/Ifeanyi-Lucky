@@ -22,6 +22,7 @@ const Burger = () => {
 };
 
 const BurgerStyled = styled.div`
+  margin-top: 1.5rem;
   height: 2rem;
   width: 2rem;
   position: fixed;
@@ -31,7 +32,9 @@ const BurgerStyled = styled.div`
   flex-flow: column nowrap;
   justify-content: space-around;
   z-index: 20;
-
+  @media (min-width: 678px) {
+    display: none;
+  }
   div {
     background-color: ${({ isOpen }) => (isOpen ? "#333" : "#ccc")};
     width: 2rem;
