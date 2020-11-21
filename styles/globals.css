@@ -11,8 +11,13 @@
   --green-color: #27c53f;
   --red-color: #ea4335;
   --link-bg-color: #f3e5d9;
+  --normal-text-color: rgba(0, 0, 0, 0.6);
+  --paragraph: rgba(0, 0, 0, 0.84);
 }
-
+::selection {
+  color: var(--green-color);
+  background-color: var(--link-bg-color);
+}
 ul {
   list-style: none;
   margin: 0;
@@ -29,6 +34,7 @@ body {
 }
 p {
   font-size: var(--pfont-size);
+  color: var(--paragraph);
 }
 
 a {
@@ -46,9 +52,11 @@ a {
   border-radius: 6px;
   cursor: pointer;
   transition: 0.4s;
+  text-decoration: none;
+  color: var(--normal-text-color);
 }
 .link:hover {
-  background-color: #f6ba2c;
+  background-color: var(--green-color);
   color: white;
 }
 nav {

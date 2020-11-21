@@ -58,15 +58,17 @@ const Ul = styled.ul`
     top: 0;
     right: 0;
     text-align: center;
-    justify-content: space-around;
-    align-content: center;
+
     background-color: black;
     width: 100%;
     height: 100vh;
     z-index: 10;
 
     li {
-      color: white;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 `;

@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import React from "react";
 import Burger from "./Burger";
 const Navbar = () => {
   return (
     <Nav>
       <div className="mac">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div />
+        <div />
+        <div />
       </div>
       <Burger />
     </Nav>
@@ -26,13 +27,14 @@ const Nav = styled.nav`
   .mac {
     display: flex;
     flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: space-around;
     margin-right: 5px;
 
     div {
       background-color: black;
       display: block;
-      margin-left: 5px;
+      margin-left: 8px;
       border-radius: 50%;
       padding: 10px 10px;
 
