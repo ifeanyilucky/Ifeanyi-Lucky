@@ -10,6 +10,7 @@
   --yellow-color: #f6ba2c;
   --green-color: #27c53f;
   --red-color: #ea4335;
+  --link-bg-color: rgb(230, 230, 230);
 }
 
 ul {
@@ -38,67 +39,9 @@ a {
 * {
   box-sizing: border-box;
 }
-.red {
-  color: red;
-}
 
-.yellow {
-  color: yellow;
-}
-.nav-dot {
-  background-color: rgb(255, 174, 0);
-  padding: 2px 13px;
-  border-radius: 50%;
-  margin-right: 0.5rem;
-  transition: 0.5s padding ease-in-out !important;
-  cursor: pointer;
-}
-.nav-dot:hover {
-  background-color: teal;
-}
-.nav-dot:nth-child(1) {
-  background-color: #ea4335;
-}
-.nav-dot:nth-child(2) {
-  background-color: #f6ba2c;
-}
-.nav-dot:nth-child(3) {
-  background-color: #27c53f;
-}
-.nav-dot:nth-child(1):hover {
-  padding: 3px 10px;
-  border-radius: 20px;
-}
-
-.nav-dot:nth-child(1):hover::after {
-  content: "Home";
-  color: white;
-  transition: 0.5s content;
-}
-.nav-dot:nth-child(2):hover {
-  padding: 3px 10px;
-  border-radius: 20px;
-}
-
-.nav-dot:nth-child(2):hover::after {
-  content: "About";
-  color: white;
-}
-.nav-dot:nth-child(3):hover {
-  padding: 3px 10px;
-  border-radius: 20px;
-}
-
-.nav-dot:nth-child(3):hover::after {
-  content: "Project";
-  color: white;
-}
-.dot-group {
-  margin-top: 2rem;
-  margin-left: 2rem;
-}
 .link {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--link-bg-color);
   padding: 1px 7px;
   border-radius: 6px;
   cursor: pointer;

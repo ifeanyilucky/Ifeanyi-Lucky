@@ -1,9 +1,8 @@
 import Head from "next/head";
 import style from "../styles/Home.module.css";
-import React, { Component } from "react";
+import React from "react";
 import Layout from "../Components/Layout";
 import Link from "next/link";
-import styled from "styled-components";
 
 const Index = () => {
   return (

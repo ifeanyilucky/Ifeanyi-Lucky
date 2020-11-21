@@ -1,4 +1,4 @@
-export const PROJECT_DATA = [
+const PROJECT_DATA = [
   //PROJECT 1
   {
     name: "World Rank",
@@ -21,3 +21,5 @@ export const PROJECT_DATA = [
     url: "#",
   },
 ];
+
+export default PROJECT_DATA;

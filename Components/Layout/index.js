@@ -1,7 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
-import Navitem from "../Navbar/Navitem";
-
+import Navbar from "../Navbar";
 const Layout = ({ children }) => {
   return (
     <>
@@ -11,11 +9,7 @@ const Layout = ({ children }) => {
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
         crossorigin="anonymous"
       ></link>
-      <Navbar>
-        <Navitem color="#ea4335" icon="O" />
-        <Navitem icon="O" />
-        <Navitem icon="O" />
-      </Navbar>
+      <Navbar />
       <div className="container">{children}</div>
     </>
   );
