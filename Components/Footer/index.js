@@ -1,17 +1,29 @@
 import React from "react";
-
-import {Dribble, Facebook, Twitter, Github, Linkedin, Instagram} from "../Icons";
-
-const Footer = (props)=>{
-    const {firstName, lastName, country} = props;
-    return(
-        <>
-            <h1>
-                Hello World my name is {firstName} {lastName} and i'm from {country}
-            </h1>
-
-        </>
-    )
-}
-
+import SocialTab from "../Tabs";
+import Link from "next/link";
+import styled from "styled-components";
+import { IconRight } from "../Icons";
+const Footer = () => {
+  return (
+    <>
+      <FooterLink>
+        <div className="container">
+          <Link href="/about">
+            <p>
+              <a className="weblink">
+                See more about me
+                <IconRight />
+              </a>
+            </p>
+          </Link>
+        </div>
+      </FooterLink>
+      <SocialTab />
+    </>
+  );
+};
+const FooterLink = styled.footer`
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+`;
 export default Footer;

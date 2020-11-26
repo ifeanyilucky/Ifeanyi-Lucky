@@ -100,3 +100,6 @@ nav .link {
     opacity: 1;
   }
 }
+a:hover {
+  color: var(--green-color);
+}

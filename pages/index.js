@@ -4,6 +4,7 @@ import React from "react";
 import Layout from "../Components/Layout";
 import Link from "next/link";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 const Index = () => {
   const lucky = {
     color: "#27c53f",
@@ -44,12 +45,14 @@ const Index = () => {
                     Working with my hands to make magic happen on the internet.
                     View my
                     <Link href="/projects">
-                      <span className="link">Projects</span>
+                      <motion.span className="link" animate={{ scale: 1 }}>
+                        Projects
+                      </motion.span>
                     </Link>
                     , <span className="link">Articles</span>,
                     <span className="link">Resumé</span>,
                     <Link href="/contact">
-                      <span className="link">Contact</span>
+                      <motion.span className="link">Contact</motion.span>
                     </Link>
                     me, or send me an email at
                     <a href="mailto:ifeanyilucky360@gmail.com">
@@ -57,24 +60,6 @@ const Index = () => {
                     </a>
                     .
                   </p>
-                </div>
-                <div className="mt-5">
-                  <Link href="/about">
-                    <p>
-                      <a className="weblink">
-                        See more about me
-                        <svg
-                          width="24"
-                          height="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                        >
-                          <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"></path>
-                        </svg>
-                      </a>
-                    </p>
-                  </Link>
                 </div>
               </div>
             </div>

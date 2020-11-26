@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import React from "react";
 import Burger from "./Burger";
+import Link from "next/link";
 const Navbar = () => {
   return (
     <Nav>
-      <div className="mac">
-        <div />
-        <div />
-        <div />
-      </div>
+      <Link href="/">
+        <div className="mac">
+          <div />
+          <div />
+          <div />
+        </div>
+      </Link>
       <Burger />
     </Nav>
   );
@@ -23,6 +26,11 @@ const Nav = styled.nav`
   flex-flow: row nowrap;
   justify-content: space-between;
   padding-top: 3rem;
+  position: fixed;
+  background-color: #f9f9f9;
+  border: 5px solid #e9e9e9;
+
+  z-index: 1;
 
   .mac {
     display: flex;
@@ -30,6 +38,7 @@ const Nav = styled.nav`
     flex-direction: row;
     justify-content: space-around;
     margin-right: 5px;
+    cursor: pointer;
 
     div {
       background-color: black;
