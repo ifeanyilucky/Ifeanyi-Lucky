@@ -4,7 +4,7 @@ import { DarkMode } from "../DarkMode";
 import Footer from "../Footer";
 // import { GlobalStyle, LightTheme, DarkTheme } from "../DarkMode/GlobalStyle";
 // import Toggle from "../DarkMode/Toggle";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 
 const Layout = ({ children }) => {
   // const [theme, toggleTheme] = DarkMode();
@@ -20,15 +20,31 @@ const Layout = ({ children }) => {
         crossorigin="anonymous"
       ></link>
 
-      <div className="container">
+      <Container>
         <Navbar />
         {/* <Toggle theme={theme} toggleTheme={toggleTheme} /> */}
         {children}
         <Footer />
-      </div>
+      </Container>
       {/* </ThemeProvider> */}
     </>
   );
 };
 
+const Container = styled.div`
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+`;
 export default Layout;

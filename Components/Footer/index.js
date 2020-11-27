@@ -7,16 +7,14 @@ const Footer = () => {
   return (
     <>
       <FooterLink>
-        <div className="container">
-          <Link href="/about">
-            <p>
-              <a className="weblink">
-                See more about me
-                <IconRight />
-              </a>
-            </p>
-          </Link>
-        </div>
+        <Link href="/about">
+          <p>
+            <a className="weblink">
+              See more about me
+              <IconRight />
+            </a>
+          </p>
+        </Link>
       </FooterLink>
       <SocialTab />
     </>

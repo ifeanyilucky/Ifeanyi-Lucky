@@ -42,7 +42,7 @@ const Tab = styled.div`
   position: fixed;
   top: 30vh;
   left: 0;
-  background-color: var(--green);
+  background-color: var(--green-color);
   padding: 15px 10px;
   vertical-align: middle;
   .social {
@@ -60,6 +60,7 @@ const Tab = styled.div`
     width: 100%;
     height: 70px;
     margin: auto;
+    padding-bottom: 1rem;
     vertical-align: bottom;
 
     .social {

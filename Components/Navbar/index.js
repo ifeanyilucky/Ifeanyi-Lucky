@@ -27,9 +27,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding-top: 3rem;
   position: fixed;
-  background-color: #f9f9f9;
-  border: 5px solid #e9e9e9;
-
+  background-color: greenyellow;
   z-index: 1;
 
   .mac {
