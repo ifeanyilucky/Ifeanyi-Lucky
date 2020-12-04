@@ -1,8 +1,15 @@
+import { Icon, Moon } from "../Icons";
+import Link from "next/link";
+
 const Toggle = ({ theme, toggleTheme }) => {
   console.log(theme);
   return (
     <div>
-      <h1 onClick={toggleTheme}>Toggle</h1>
+      <Link href="#0">
+        <a onClick={toggleTheme}>
+          <Moon />
+        </a>
+      </Link>
     </div>
   );
 };

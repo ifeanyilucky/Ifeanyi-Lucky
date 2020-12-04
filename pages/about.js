@@ -45,10 +45,7 @@ class About extends React.Component {
   render() {
     return (
       <>
-        <Layout>
-          <Head>
-            <title>About Me | Ifeanyi Lucky | Codack</title>
-          </Head>
+        <Layout title="About me">
           {/* <h1>{this.state.heading}</h1>
         <button className="link btn-primary btn" onClick={()=>{this.buttonClick()}}>{this.state.button}</button>
         <Link href="/"><a>{this.state.goBack}</a></Link>

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const NavItem = ({ isOpen }) => {
   return (
-    <Ul isOpen={isOpen}>
+    <Ul isOpen={!isOpen}>
       <li>
         <Link href="/">
           <a>Home</a>
@@ -58,17 +58,21 @@ const Ul = styled.ul`
     position: fixed;
     top: 0;
     right: 0;
-    text-align: center;
+    text-align: left;
+    margin: auto;
 
-    background-color: black;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: var(--bg-color);
     width: 100%;
     height: 100vh;
     z-index: 10;
 
     li {
+      display: block;
       a {
         text-decoration: none;
-        color: white;
+        color: var(--paragraph);
       }
     }
   }

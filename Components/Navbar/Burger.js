@@ -32,27 +32,28 @@ const BurgerStyled = styled.div`
   flex-flow: column nowrap;
   justify-content: space-around;
   z-index: 20;
+  cursor: pointer;
   @media (min-width: 678px) {
     display: none;
   }
   div {
-    background-color: ${({ isOpen }) => (isOpen ? "#333" : "#ccc")};
+    background-color: ${({ isOpen }) => (isOpen ? "var(--paragraph)" : "#333")};
     width: 2rem;
     height: 0.14rem;
     transform-origin: 1px;
     transition: all 0.2s linear;
 
     &:nth-child(1) {
-      transform: ${({ isOpen }) => (isOpen ? "rotate(0)" : "rotate(45deg)")};
+      transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
     }
     &:nth-child(2) {
       transform: ${({ isOpen }) =>
-        isOpen ? "translateX(0)" : "translateX(100%)"};
-      opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+        isOpen ? "translateX(100%)" : "translateX(0)"};
+      opacity: ${({ isOpen }) => (isOpen ? "0" : "1")};
     }
 
     &:nth-child(3) {
-      transform: ${({ isOpen }) => (isOpen ? "rotate(0)" : "rotate(-45deg)")};
+      transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 `;

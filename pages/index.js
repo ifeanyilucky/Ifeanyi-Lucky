@@ -12,56 +12,44 @@ const Index = () => {
   return (
     <>
       <Layout>
-        <Head>
-          <title>Ifeanyi Lucky</title>
-        </Head>
         <div>
-          <div className={style.helloParent}>
-            <div className={style.hello}>
-              HELL<span className="bigO">O</span>
-            </div>
-          </div>
           <div>
-            <div className="row">
-              <div className="col-10 mx-auto">
-                <div className={style.intro}>
-                  <Intro>
-                    <h1
-                      data-text="I'm Ifeanyi Lucky"
-                      className="h1"
-                      className="intro__text"
-                    >
-                      I'm Ifeanyi<span style={lucky}> Lucky</span>
-                    </h1>
-                  </Intro>
-                  <div className={style.role}>Frontend Developer</div>
-                  <p className="mx-auto mt-3">
-                    I'm a software engineer specializing in developing - and
-                    often designing - high-quality applications and websites.
-                    I’m currently looking for a mid-level role.
-                  </p>
-                  <br />
-                  <p style={{ lineHeight: "30px" }}>
-                    Working with my hands to make magic happen on the internet.
-                    View my
-                    <Link href="/projects">
-                      <motion.span className="link" animate={{ scale: 1 }}>
-                        Projects
-                      </motion.span>
-                    </Link>
-                    , <span className="link">Articles</span>,
-                    <span className="link">Resumé</span>,
-                    <Link href="/contact">
-                      <motion.span className="link">Contact</motion.span>
-                    </Link>
-                    me, or send me an email at
-                    <a href="mailto:ifeanyilucky360@gmail.com">
-                      <span className="link">ifeanyilucky360@gmail.com</span>
-                    </a>
-                    .
-                  </p>
-                </div>
-              </div>
+            <div className={style.intro}>
+              <Intro>
+                <h1
+                  data-text="I'm Ifeanyi Lucky"
+                  className="h1"
+                  className="intro__text"
+                >
+                  I'm Ifeanyi<span style={lucky}> Lucky</span>
+                </h1>
+              </Intro>
+
+              <p className="mx-auto mt-3">
+                I'm a software engineer specializing in developing - and often
+                designing - high-quality applications and websites. I’m
+                currently looking for a mid-level role.
+              </p>
+              <br />
+              <p style={{ lineHeight: "30px" }}>
+                Working with my hands to make magic happen on the internet. View
+                my
+                <Link href="/projects">
+                  <motion.span className="link" animate={{ scale: 1 }}>
+                    Projects
+                  </motion.span>
+                </Link>
+                , <span className="link">Articles</span>,
+                <span className="link">Resumé</span>,
+                <Link href="/contact">
+                  <motion.span className="link">Contact</motion.span>
+                </Link>
+                me, or send me an email at
+                <a href="mailto:ifeanyilucky360@gmail.com">
+                  <span className="link">ifeanyilucky360@gmail.com</span>
+                </a>
+                .
+              </p>
             </div>
           </div>
         </div>

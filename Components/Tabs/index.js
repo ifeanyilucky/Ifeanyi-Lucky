@@ -42,7 +42,7 @@ const Tab = styled.div`
   position: fixed;
   top: 30vh;
   left: 0;
-  background-color: var(--green-color);
+  background-color: var(--tab-color);
   padding: 15px 10px;
   vertical-align: middle;
   .social {
@@ -51,14 +51,14 @@ const Tab = styled.div`
     cursor: pointer;
     color: grey;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 990px) {
     display: flex;
     flex-flow: row nowrap;
     position: fixed;
-    top: 90vh;
+    top: 92vh;
     right: 0;
     width: 100%;
-    height: 70px;
+    height: 57px;
     margin: auto;
     padding-bottom: 1rem;
     vertical-align: bottom;

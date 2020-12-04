@@ -1,25 +1,35 @@
-const PROJECT_DATA = [
+export const PROJECT_DATA = [
   //PROJECT 1
   {
     name: "World Rank",
     id: "1",
     url: "#",
+    img: "#",
+    type: ["project", "open-source", "tools"],
+    technologies: ["React", "Sass & CSS", "Javascript", "Context"],
   },
   {
-    name: "World Rank",
+    name: "Covid 19",
     id: "2",
     url: "#",
+    img: "#",
+    type: ["project", "open-source", "tools"],
+    technologies: ["React", "CSS", "Javascript"],
   },
   {
-    name: "World Rank",
+    name: "Movies Search",
     id: "3",
     url: "#",
+    img: "#",
+    type: ["project", "open-source", "tools"],
+    technologies: ["React", "Sass & CSS", "Javascript", "Context"],
   },
   {
-    name: "World Rank",
+    name: "Dictionary",
     id: "4",
     url: "#",
+    img: "#",
+    type: ["project", "open-source", "tools"],
+    technologies: ["React", "Sass & CSS", "Javascript", "Context"],
   },
 ];
-
-export default PROJECT_DATA;

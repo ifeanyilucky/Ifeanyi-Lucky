@@ -1,30 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar";
-import { DarkMode } from "../DarkMode";
+// import { DarkMode } from "../DarkMode";
+import Head from "next/head";
 import Footer from "../Footer";
+import styled from "styled-components";
 // import { GlobalStyle, LightTheme, DarkTheme } from "../DarkMode/GlobalStyle";
 // import Toggle from "../DarkMode/Toggle";
-import styled from "styled-components";
+// import styled, { ThemeProvider } from "styled-components";
+const Layout = ({ children, title = "Home", text = "Hello" }) => {
+  //   const [theme, toggleTheme] = DarkMode();
+  //   const themeMode = theme === "light" ? LightTheme : DarkTheme;
 
-const Layout = ({ children }) => {
-  // const [theme, toggleTheme] = DarkMode();
-  // const themeMode = theme === "light" ? LightTheme : DarkTheme;
   return (
     <>
-      {/* <ThemeProvider theme={themeMode}> */}
-      {/* <GlobalStyle /> */}
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-        crossorigin="anonymous"
-      ></link>
+      <Head>
+        <title>{`${title} | Ifeanyi Lucky | Codack`}</title>
 
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+          crossorigin="anonymous"
+        ></link>
+      </Head>
+      {/* <ThemeProvider theme={themeMode}>
+        <GlobalStyle /> */}
       <Container>
         <Navbar />
-        {/* <Toggle theme={theme} toggleTheme={toggleTheme} /> */}
-        {children}
-        <Footer />
+
+        <HelloParent>
+          <div className="hello">{text}</div>
+        </HelloParent>
+        <div className="col-10 mx-auto">
+          {/* <Toggle theme={theme} toggleTheme={toggleTheme} /> */}
+          {children}
+          <Footer />
+        </div>
       </Container>
       {/* </ThemeProvider> */}
     </>
@@ -47,4 +58,23 @@ const Container = styled.div`
     width: 1170px;
   }
 `;
+
+const HelloParent = styled.div`
+  position: relative;
+  vertical-align: middle;
+
+  .hello {
+    position: absolute;
+    top: 12rem;
+    left: -18rem;
+    font-weight: 900;
+    font-size: 10rem;
+    color: rgba(128, 128, 128, 0.132);
+    transform: rotate(90deg);
+    @media (max-width: 768px) {
+      left: -13rem;
+    }
+  }
+`;
+
 export default Layout;

@@ -13,6 +13,10 @@
   --link-bg-color: #f3e5d9;
   --normal-text-color: rgba(0, 0, 0, 0.6);
   --paragraph: rgba(0, 0, 0, 0.84);
+  --border-color: #e8dacf;
+  --tab-color: #f7e4d4;
+  --para-text: #545454;
+  --font-sm: 0.875em;
 }
 ::selection {
   color: var(--green-color);
@@ -33,8 +37,8 @@ body {
   background-color: var(--bg-color) !important;
 }
 p {
-  font-size: var(--pfont-size);
-  color: var(--paragraph);
+  font-size: var(--font-sm);
+  color: var(--para-text);
 }
 
 a {

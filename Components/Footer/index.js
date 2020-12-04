@@ -9,7 +9,7 @@ const Footer = () => {
       <FooterLink>
         <Link href="/about">
           <p>
-            <a className="weblink">
+            <a className="weblink" style={{ color: "var(--para-text)" }}>
               See more about me
               <IconRight />
             </a>

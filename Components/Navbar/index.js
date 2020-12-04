@@ -26,8 +26,7 @@ const Nav = styled.nav`
   flex-flow: row nowrap;
   justify-content: space-between;
   padding-top: 3rem;
-  position: fixed;
-  background-color: greenyellow;
+
   z-index: 1;
 
   .mac {
@@ -37,6 +36,7 @@ const Nav = styled.nav`
     justify-content: space-around;
     margin-right: 5px;
     cursor: pointer;
+    position: fixed;
 
     div {
       background-color: black;
