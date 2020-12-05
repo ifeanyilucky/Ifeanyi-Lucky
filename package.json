@@ -13,7 +13,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "next start -p $PORT",
+     "build": "next build && cp _redirects build/_redirects",
   },
   "dependencies": {
     "axios": "^0.21.0",
