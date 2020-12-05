@@ -107,3 +107,59 @@ nav .link {
 a:hover {
   color: var(--green-color);
 }
+/* 
+.alink {
+  display: inline-block;
+  position: relative;
+  color: #343434;
+  text-decoration: none;
+  padding: 0 6px;
+
+  text-decoration: none !important;
+}
+.alink::before,
+.alink::after {
+  will-change: transform;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.alink:active::before {
+  transition: 100ms ease-in;
+  background: mix(#f1f1f1, #0077ff, 40%);
+}
+.alink:after {
+  transition: 100ms ease-in;
+  border-left-color: mix(#f1f1f1, #0077ff, 40%);
+}
+
+.alink::before {
+  transition: 100ms ease-out 50ms;
+  transform-origin: 0 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: mix(#f1f1f1, #0077ff, 80%);
+}
+.alink::after {
+  transition: 50ms ease-out;
+  transform: scaleX(0);
+  transform-origin: left center;
+  bottom: 2px;
+  right: -12px;
+  border: 8px solid transparent;
+  border-left-color: mix(#f1f1f1, #0077ff, 60%);
+}
+
+.alink:hover::before {
+  transition: 100ms ease-out;
+  transform: scaleY(0.18);
+  background: mix(#f1f1f1, #0077ff, 60%);
+}
+.alink::after {
+  transition: 50ms ease-out 100ms;
+  transform: none;
+} */

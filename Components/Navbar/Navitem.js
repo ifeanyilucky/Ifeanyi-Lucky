@@ -57,7 +57,7 @@ const Ul = styled.ul`
     flex-flow: column nowrap;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 15px;
     text-align: left;
     margin: auto;
 

@@ -1,28 +1,39 @@
-import Head from "next/head";
 import style from "../styles/Home.module.css";
 import React from "react";
 import Layout from "../Components/Layout";
 import Link from "next/link";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+
 const Index = () => {
   const lucky = {
     color: "#27c53f",
   };
+
   return (
     <>
       <Layout>
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
           <div>
             <div className={style.intro}>
               <Intro>
-                <h1
+                <motion.h1
+                  // initial={{ opacity: 0 }}
+                  // animate={{ opacity: 1 }}
+                  // transition={{ delay: 0.6 }}
+                  drag="x"
+                  dragConstraints={{ left: -100, right: 350 }}
                   data-text="I'm Ifeanyi Lucky"
                   className="h1"
                   className="intro__text"
+                  style={{ cursor: "grab" }}
                 >
                   I'm Ifeanyi<span style={lucky}> Lucky</span>
-                </h1>
+                </motion.h1>
               </Intro>
 
               <p className="mx-auto mt-3">
@@ -52,7 +63,7 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </Layout>
     </>
   );

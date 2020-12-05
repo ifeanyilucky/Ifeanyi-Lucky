@@ -25,6 +25,12 @@ const Layout = ({ children, title = "Home", text = "Hello" }) => {
       </Head>
       {/* <ThemeProvider theme={themeMode}>
         <GlobalStyle /> */}
+      <Frame>
+        <div className="top__frame" />
+        <div className="bottom__frame" />
+        <div className="right__frame" />
+        <div className="left__frame" />
+      </Frame>
       <Container>
         <Navbar />
 
@@ -77,4 +83,47 @@ const HelloParent = styled.div`
   }
 `;
 
+const Frame = styled.div`
+  .top__frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .bottom__frame {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 15px;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .right__frame {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 15px;
+    z-index: 1000;
+  }
+  .left__frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 15px;
+    z-index: 1000;
+  }
+
+  .left__frame,
+  .top__frame,
+  .bottom__frame,
+  .right__frame {
+    background-color: #222222;
+  }
+`;
 export default Layout;

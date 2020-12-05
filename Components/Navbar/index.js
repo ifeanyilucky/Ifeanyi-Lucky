@@ -31,12 +31,12 @@ const Nav = styled.nav`
 
   .mac {
     display: flex;
+
     flex-flow: row nowrap;
     flex-direction: row;
     justify-content: space-around;
     margin-right: 5px;
     cursor: pointer;
-    position: fixed;
 
     div {
       background-color: black;
