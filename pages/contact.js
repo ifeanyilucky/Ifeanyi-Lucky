@@ -12,7 +12,7 @@ class Contact extends React.Component {
     return (
       <>
         <Layout title="Contact" text="Contact">
-          <div className="col-10 mx-auto">
+          <div className="col-12 mx-auto">
             <div className="container">
               <div className="mt-5">
                 <h1 className="intro___text"> Contact.</h1>
@@ -105,7 +105,6 @@ const Form = styled.form`
     background: transparent;
     margin-bottom: 2rem;
     resize: none;
-
     box-shadow: none !important;
     padding: 24px 21px !important;
     border-color: var(--border-color) !important;

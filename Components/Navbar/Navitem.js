@@ -60,7 +60,8 @@ const Ul = styled.ul`
     right: 15px;
     text-align: left;
     margin: auto;
-
+    justify-content: center;
+    align-items: center;
     vertical-align: middle;
     overflow: hidden;
     background-color: var(--bg-color);
@@ -72,6 +73,8 @@ const Ul = styled.ul`
       display: block;
       a {
         text-decoration: none;
+        font-size: 50px;
+        text-transform: capitalize;
         color: var(--paragraph);
       }
     }

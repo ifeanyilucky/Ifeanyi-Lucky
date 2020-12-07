@@ -14,16 +14,16 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start -p $PORT"
-     
   },
   "dependencies": {
     "axios": "^0.21.0",
     "date-fns": "^2.16.1",
-    "framer-motion": "^2.9.4",
+    "framer-motion": "^2.9.5",
     "mongoose": "^5.10.8",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.2.1" 
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
   }
 }

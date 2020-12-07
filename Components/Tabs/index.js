@@ -60,7 +60,7 @@ const Tab = styled.div`
     width: 100%;
     height: 57px;
     margin: auto;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     vertical-align: bottom;
 
     .social {

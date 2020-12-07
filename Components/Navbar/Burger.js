@@ -27,7 +27,7 @@ const BurgerStyled = styled.div`
   width: 2rem;
   position: fixed;
   top: 15px;
-  right: 15px;
+  right: 30px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
