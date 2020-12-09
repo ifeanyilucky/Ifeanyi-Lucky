@@ -75,8 +75,8 @@ const Intro = styled.div`
 
   .intro__text {
     font-size: 4rem;
-    color: black;
-    font-weight: 900;
+    color: var(--intro-color);
+    font-weight: 700;
     margin: 2rem 0rem 1.5rem;
     position: relative;
     letter-spacing: -1.1px;

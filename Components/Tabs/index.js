@@ -41,7 +41,7 @@ const Tab = styled.div`
   justify-content: space-between;
   position: fixed;
   top: 30vh;
-  left: 15px;
+  right: 15px;
   background-color: var(--tab-color);
   padding: 15px 10px;
   vertical-align: middle;
@@ -70,5 +70,6 @@ const Tab = styled.div`
 `;
 const SocialLink = styled.a`
   color: grey;
+  font-size: 7px;
 `;
 export default SocialTab;

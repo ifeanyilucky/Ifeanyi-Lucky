@@ -25,7 +25,7 @@ const Nav = styled.nav`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding-top: 3rem;
+  padding-top: 4rem;
 
   z-index: 1;
 

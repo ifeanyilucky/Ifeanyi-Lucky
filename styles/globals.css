@@ -12,16 +12,37 @@
   --red-color: #ea4335;
   --link-bg-color: #f3e5d9;
   --normal-text-color: rgba(0, 0, 0, 0.6);
+  --icon-fill: #545454;
   --paragraph: rgba(0, 0, 0, 0.84);
   --border-color: #e8dacf;
   --tab-color: #f7e4d4;
   --para-text: #545454;
   --font-sm: 0.875em;
+  --intro-color: #000;
+}
+[data-theme="dark"] {
+  --icon-fill: #fff;
+  --text-color: #f0f0f0;
+  --bg-color: #020a13;
+  --intro-color: #fff;
+  --paragraph: #c6c6c6;
+  --link-bg-color: #091521;
+  --normal-text-color: #c6c6c6;
+  --para-text: #c6c6c6;
+  --tab-color: #091521;
 }
 ::selection {
   color: var(--green-color);
   background-color: var(--link-bg-color);
 }
+.icon__color {
+  fill: var(--icon-fill);
+}
+
+.icon__color:hover {
+  fill: #545454;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -58,6 +79,7 @@ a {
   transition: 0.4s;
   text-decoration: none;
   color: var(--normal-text-color);
+  padding: 3px 12px;
 }
 .link:hover {
   background-color: var(--green-color);

@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-
+import { Moon } from "../Icons";
 const NavItem = ({ isOpen }) => {
+  const [theme, setTheme] = useState("light");
+
+  const switchTheme = () => {
+    if (theme == "light") {
+      setTheme("dark");
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      setTheme("dark");
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  };
+
   return (
     <Ul isOpen={!isOpen}>
       <li>
@@ -25,9 +37,25 @@ const NavItem = ({ isOpen }) => {
           <a>Contact</a>
         </Link>
       </li>
+
+      <ThemeSwitcher onClick={switchTheme}>
+        <Moon />
+      </ThemeSwitcher>
     </Ul>
   );
 };
+const ThemeSwitcher = styled.button`
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  outline: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-top: 12px;
+`;
 
 const Ul = styled.ul`
   list-style: none;
@@ -38,14 +66,14 @@ const Ul = styled.ul`
   li {
     a {
       text-decoration: none;
-      margin-left: 0.96rem;
+      margin-left: 1.4rem;
       font-size: 15px;
-      color: rgba(0, 0, 0, 0.5);
+      color: var(--para-text);
       transition: border-bottom 0.3s ease-in-out;
       padding-bottom: 8px;
       &:hover {
         color: rgba(0, 0, 0, 0.7);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+        color: #fff;
       }
     }
   }
@@ -75,7 +103,7 @@ const Ul = styled.ul`
         text-decoration: none;
         font-size: 50px;
         text-transform: capitalize;
-        color: var(--paragraph);
+        color: var(--para-text);
       }
     }
   }

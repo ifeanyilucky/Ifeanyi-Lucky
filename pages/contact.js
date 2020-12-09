@@ -14,12 +14,12 @@ class Contact extends React.Component {
         <Layout title="Contact" text="Contact">
           <div className="col-12 mx-auto">
             <div className="container">
-              <div className="mt-5">
+              <FormWrapper className="mt-5">
                 <h1 className="intro___text"> Contact.</h1>
 
                 <div>
                   <p>
-                    Get in touch or shoot me an email directly on{" "}
+                    Get in touch or shoot me an email directly on
                     <strong>ifeanyilucky360@gmail.com.com</strong>
                   </p>
                 </div>
@@ -39,6 +39,7 @@ class Contact extends React.Component {
                       <input
                         className="form__control"
                         type="email"
+                        name="email"
                         placeholder="email"
                         aria-required="true"
                         required
@@ -47,22 +48,26 @@ class Contact extends React.Component {
 
                     <div>
                       <textarea
-                        className="form__control"
                         rows="5"
-                        cols="20"
+                        cols="40"
+                        className="form__control"
                         placeholder="message"
                         aria-required="true"
                         required
                       />
                     </div>
                     <div>
-                      <button type="submit" className="btn Btn btn-default">
+                      <button
+                        type="submit"
+                        className="btn Btn btn-default"
+                        onClick={(e) => e.preventDefault()}
+                      >
                         Submit
                       </button>
                     </div>
                   </Form>
                 </div>
-              </div>
+              </FormWrapper>
             </div>
           </div>
         </Layout>
@@ -79,15 +84,20 @@ const PageSection = styled.div`
   }
 `;
 
+const FormWrapper = styled.div`
+  @media (min-width: 768px) {
+    padding-right: 19rem;
+  }
+`;
 const Form = styled.form`
   .form__control {
     display: block;
     background-color: var(--bg-color) !important;
     margin-bottom: 2rem;
     width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
+    height: calc(1.5em + 1rem + 2px);
+    padding: 1.5rem 0.75rem !important;
+    font-size: 0.89rem;
     font-weight: 400;
     line-height: 1.5;
 
@@ -99,19 +109,23 @@ const Form = styled.form`
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     &::placeholder {
       color: #6c757d;
+      text-transform: capitalize;
     }
   }
   textarea {
     background: transparent;
-    margin-bottom: 2rem;
-    resize: none;
+    /* margin-bottom: 2rem; */
+    /* resize: none; */
     box-shadow: none !important;
-    padding: 24px 21px !important;
+    /* padding: 24px 21px !important; */
     border-color: var(--border-color) !important;
-    height: auto;
+    height: 160px !important;
+    width: 250px;
+    overflow: hidden;
   }
   .Btn {
-    padding: 15px 40px;
+    padding: 13px 44px;
+    font-size: 0.89rem;
     background-color: var(--border-color);
   }
 `;

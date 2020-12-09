@@ -4,6 +4,7 @@ import Navbar from "../Navbar";
 import Head from "next/head";
 import Footer from "../Footer";
 import styled from "styled-components";
+import { Moon } from "../Icons";
 // import { GlobalStyle, LightTheme, DarkTheme } from "../DarkMode/GlobalStyle";
 // import Toggle from "../DarkMode/Toggle";
 // import styled, { ThemeProvider } from "styled-components";
@@ -70,13 +71,16 @@ const HelloParent = styled.div`
   vertical-align: middle;
 
   .hello {
+    overflow-y: hidden;
     position: absolute;
     top: 12rem;
     left: -18rem;
     font-weight: 900;
     font-size: 10rem;
     color: rgba(128, 128, 128, 0.132);
-    transform: rotate(90deg);
+    opacity: 0.7;
+    overflow: hidden;
+    /* transform: rotate(90deg); */
     @media (max-width: 768px) {
       left: -13rem;
     }
