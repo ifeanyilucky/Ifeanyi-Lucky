@@ -12,8 +12,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start -p $PORT"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "axios": "^0.21.0",
