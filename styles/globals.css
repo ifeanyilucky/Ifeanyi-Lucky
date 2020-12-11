@@ -19,6 +19,7 @@
   --para-text: #545454;
   --font-sm: 0.875em;
   --intro-color: #000;
+  transition: 0.4s all ease-in-out;
 }
 [data-theme="dark"] {
   --icon-fill: #fff;
@@ -30,6 +31,7 @@
   --normal-text-color: #c6c6c6;
   --para-text: #c6c6c6;
   --tab-color: #091521;
+  transition: 0.2s all ease-in-out;
 }
 ::selection {
   color: var(--green-color);
@@ -37,6 +39,7 @@
 }
 .icon__color {
   fill: var(--icon-fill);
+  transition: all 0.4s linear;
 }
 
 .icon__color:hover {
@@ -56,6 +59,7 @@ body {
   margin: 0;
   font-family: Poppins !important;
   background-color: var(--bg-color) !important;
+  color: var(--text-color);
 }
 p {
   font-size: var(--font-sm);

@@ -5,7 +5,7 @@ const SocialTab = () => {
     <div>
       <Tab>
         <div className="social">
-          <SocialLink href="https://instagram.com/iamcodack" target="_blank">
+          <SocialLink href="https://twitter.com/ifeanyilucas" target="_blank">
             <Twitter />
           </SocialLink>
         </div>
@@ -16,17 +16,17 @@ const SocialTab = () => {
           </SocialLink>
         </div>
         <div className="social">
-          <SocialLink href="#linked" target="_blank">
+          <SocialLink href="https://linkedin.com/" target="_blank">
             <LinkedIn />
           </SocialLink>
         </div>
         <div className="social">
-          <SocialLink href="#linked" target="_blank">
+          <SocialLink href="https://facebook.com/" target="_blank">
             <Facebook />
           </SocialLink>
         </div>
         <div className="social">
-          <SocialLink href="#linked" target="_blank">
+          <SocialLink href="https://github.com/ifeanyilucky" target="_blank">
             <Github />
           </SocialLink>
         </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import styled from "styled-components";
-import NavItem from "./NavItem";
+import Navdata from "./Navdata";
 
 const Burger = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const Burger = () => {
         <div />
         <div />
       </BurgerStyled>
-      <NavItem isOpen={isOpen} />
+      <Navdata isOpen={isOpen} />
     </>
   );
 };
@@ -33,11 +33,12 @@ const BurgerStyled = styled.div`
   justify-content: space-around;
   z-index: 20;
   cursor: pointer;
-  @media (min-width: 678px) {
+  @media (min-width: 768px) {
     display: none;
   }
   div {
-    background-color: ${({ isOpen }) => (isOpen ? "var(--paragraph)" : "#333")};
+    background-color: ${({ isOpen }) =>
+      isOpen ? "var(--paragraph)" : "var(--text-color)"};
     width: 2rem;
     height: 0.14rem;
     transform-origin: 1px;

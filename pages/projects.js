@@ -14,7 +14,7 @@ const Projects = () => {
                 alt={project.name}
                 className="projectImg"
               />
-              <h4>{project.name}</h4>
+              <h4 id={project.id}>{project.name}</h4>
             </div>
           </>
         ))}

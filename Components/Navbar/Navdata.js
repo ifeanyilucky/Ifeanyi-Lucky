@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { Moon } from "../Icons";
-const NavItem = ({ isOpen }) => {
+const Navdata = ({ isOpen }) => {
   const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme")
+    );
+    setTheme(localStorage.getItem("theme"));
+  }, []);
   const switchTheme = () => {
     if (theme == "light") {
       setTheme("dark");
-      document.documentElement.setAttribute("data-theme", "dark");
+      saveTheme("dark");
     } else {
-      setTheme("dark");
-      document.documentElement.setAttribute("data-theme", "light");
+      setTheme("light");
+      saveTheme("light");
     }
+  };
+  const saveTheme = (theme) => {
+    setTheme(theme);
+    localStorage.setItem("theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
   };
 
   return (
@@ -68,12 +80,14 @@ const Ul = styled.ul`
       text-decoration: none;
       margin-left: 1.4rem;
       font-size: 15px;
+      font-weight: 600;
       color: var(--para-text);
       transition: border-bottom 0.3s ease-in-out;
       padding-bottom: 8px;
+      transition: 0.34s all;
       &:hover {
         color: rgba(0, 0, 0, 0.7);
-        color: #fff;
+        color: var(--text-color);
       }
     }
   }
@@ -109,4 +123,4 @@ const Ul = styled.ul`
   }
 `;
 
-export default NavItem;
+export default Navdata;

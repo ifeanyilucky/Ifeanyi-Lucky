@@ -4,7 +4,7 @@ import Navbar from "../Navbar";
 import Head from "next/head";
 import Footer from "../Footer";
 import styled from "styled-components";
-import { Moon } from "../Icons";
+
 // import { GlobalStyle, LightTheme, DarkTheme } from "../DarkMode/GlobalStyle";
 // import Toggle from "../DarkMode/Toggle";
 // import styled, { ThemeProvider } from "styled-components";
@@ -27,12 +27,13 @@ const Layout = ({ children, title = "Home", text = "Hello" }) => {
       {/* <ThemeProvider theme={themeMode}>
         <GlobalStyle /> */}
       <Frame>
-        <div className="top__frame" />
-        <div className="bottom__frame" />
-        <div className="right__frame" />
-        <div className="left__frame" />
+        <div className="top_frame" />
+        <div className="bottom_frame" />
+        <div className="right_frame" />
+        <div className="left_frame" />
+        {/* <p css="margin-top: auto;"></p> */}
       </Frame>
-      <Container>
+      <div className="container">
         <Navbar />
 
         <HelloParent>
@@ -43,38 +44,39 @@ const Layout = ({ children, title = "Home", text = "Hello" }) => {
           {children}
           <Footer />
         </div>
-      </Container>
+      </div>
       {/* </ThemeProvider> */}
     </>
   );
 };
 
-const Container = styled.div`
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+// const Container = styled.div`
+//   padding-right: 15px;
+//   padding-left: 15px;
+//   margin-right: auto;
+//   margin-left: auto;
 
-  @media (min-width: 768px) {
-    width: 750px;
-  }
-  @media (min-width: 992px) {
-    width: 970px;
-  }
-  @media (min-width: 1200px) {
-    width: 1170px;
-  }
-`;
+//   @media (min-width: 768px) {
+//     width: 750px;
+//   }
+//   @media (min-width: 992px) {
+//     width: 970px;
+//   }
+//   @media (min-width: 1200px) {
+//     width: 1170px;
+//   }
+// `;
 
-const HelloParent = styled.div`
+const HelloParent = styled.section`
   position: relative;
   vertical-align: middle;
+  position: fixed;
 
   .hello {
     overflow-y: hidden;
     position: absolute;
-    top: 12rem;
-    left: -18rem;
+    top: 22rem;
+    left: -15rem;
     font-weight: 900;
     font-size: 10rem;
     color: rgba(128, 128, 128, 0.132);
@@ -87,8 +89,8 @@ const HelloParent = styled.div`
   }
 `;
 
-const Frame = styled.div`
-  .top__frame {
+const Frame = styled.section`
+  .top_frame {
     position: fixed;
     top: 0;
     left: 0;
@@ -97,7 +99,7 @@ const Frame = styled.div`
     z-index: 1000;
   }
 
-  .bottom__frame {
+  .bottom_frame {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -106,7 +108,7 @@ const Frame = styled.div`
     z-index: 1000;
   }
 
-  .right__frame {
+  .right_frame {
     position: fixed;
     right: 0;
     top: 0;
@@ -114,7 +116,7 @@ const Frame = styled.div`
     width: 15px;
     z-index: 1000;
   }
-  .left__frame {
+  .left_frame {
     position: fixed;
     top: 0;
     left: 0;
@@ -123,10 +125,10 @@ const Frame = styled.div`
     z-index: 1000;
   }
 
-  .left__frame,
-  .top__frame,
-  .bottom__frame,
-  .right__frame {
+  .left_frame,
+  .top_frame,
+  .bottom_frame,
+  .right_frame {
     background-color: #222222;
   }
 `;

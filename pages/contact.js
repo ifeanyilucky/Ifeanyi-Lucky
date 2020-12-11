@@ -37,7 +37,7 @@ class Contact extends React.Component {
 
                     <div className="field half">
                       <input
-                        className="form__control"
+                        className="form-control"
                         type="email"
                         name="email"
                         placeholder="email"
