@@ -4,17 +4,13 @@ import styled from "styled-components";
 const Projects = () => {
   return (
     <Layout title="Projects" text="Projects">
-      {" "}
+      <h1>Projects</h1>
+      <p>Some things I've built</p>
       <Project>
         {PROJECT_DATA.map((project) => (
           <>
-            <div className="projectCard">
-              <img
-                src={project.img}
-                alt={project.name}
-                className="projectImg"
-              />
-              <h4 id={project.id}>{project.name}</h4>
+            <div className="projectCard" key={project.id}>
+              <h4 key={project.id}>{project.name}</h4>
             </div>
           </>
         ))}

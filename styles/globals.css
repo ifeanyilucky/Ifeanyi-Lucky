@@ -1,6 +1,7 @@
 :root {
   --bg-color: #fff4e9;
   --pfont-size: 15px;
+
   --navbg: #242526;
   --text-color: #dadce1;
   --navsize: 60px;
@@ -20,6 +21,18 @@
   --font-sm: 0.875em;
   --intro-color: #000;
   transition: 0.4s all ease-in-out;
+
+  --font-sm: 0.875em;
+  --font-md: 1.124em;
+  --font-x-md: 1.667em;
+  --font-x-lg: 3.275em;
+
+  @media (max-width: 787px) {
+    --font-sm: 0.813em;
+    --font-md: 1.011em;
+    --font-x-md: 1.517em;
+    --font-x-lg: 2.775em;
+  }
 }
 [data-theme="dark"] {
   --icon-fill: #fff;
